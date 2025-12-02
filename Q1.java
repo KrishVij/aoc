@@ -19,6 +19,8 @@ class Q1 {
 			while (line != null) {
 
 				char rotationIndices = line.charAt(0);
+
+				
 				
 				for (char s : line.toCharArray()) {
 
@@ -52,10 +54,6 @@ class Q1 {
 					number = "";
 				}
 
-				if (startingPoint == 0) {
-
-					Password++;
-				}
 				line = br.readLine();
 			}
 		}catch(IOException e) {
