@@ -20,7 +20,7 @@ class Q1 {
 
 				char rotationIndices = line.charAt(0);
 
-				
+				int count = 0;
 				
 				for (char s : line.toCharArray()) {
 
@@ -34,25 +34,42 @@ class Q1 {
 
 				if (rotationIndices == 'L') {
 
+					int stepsToNextZeroLeft = startingPoint;
+
+					if (stepsToNextZeroLeft == 0) {
+
+						count = num/100;
+					}else if (stepsToNextZeroLeft <= num) {
+
+						count = (num - stepsToNextZeroLeft) / 100 + 1;
+                    }
+
 					startingPoint = ((startingPoint - num) % 100);
-					if (startingPoint == 0) {
+					if (startingPoint < 0) {
 
-						Password++;
+						startingPoint += 100;
 					}
-
+					
 					num = 0;
 					number = "";
 				}else if (rotationIndices == 'R') {
 
-					startingPoint = ((startingPoint + num) % 100);
-					if (startingPoint == 0) {
+					int stepsToNextZeroRight = (100 - startingPoint) % 100;
+					if (stepsToNextZeroRight == 0) {
 
-						Password++;
+						count = num/100;
+					}else if (stepsToNextZeroRight <= num) {
+
+						count = (num - stepsToNextZeroRight) / 100 + 1;
 					}
-
+					
+					startingPoint = ((startingPoint + num) % 100);
+					
 					num = 0;
 					number = "";
 				}
+
+				Password += count;
 
 				line = br.readLine();
 			}
