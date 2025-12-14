@@ -73,9 +73,9 @@ class Q1 {
 
 				line = br.readLine();
 			}
-		}catch(IOException e) {
+		}catch(IOException io) {
 
-			e.printStackTrace();
+			io.printStackTrace();
 		}
 
 		System.out.println(Password);
