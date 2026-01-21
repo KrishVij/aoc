@@ -1,0 +1,3 @@
+const bank = "987654321111111"
+
+console.log([...bank]);
