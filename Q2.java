@@ -30,8 +30,7 @@ class Q2 {
 					boolean ok = true;
 
 					if (String.valueOf(i).length() % 2 == 0) {
-
-						//long firstHalfIndex = String.valueOf(i).length() / 2 - 1;
+						
 						int mid = String.valueOf(i).length() / 2;
 						int firstHalfIndex = mid - 1;
 						int secondHalfIndex =  String.valueOf(i).length() - 1;

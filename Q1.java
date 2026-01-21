@@ -10,7 +10,6 @@ class Q1 {
 		int startingPoint = 50;
 		int Password = 0;
 		String number = "";
-		//char rotationIndices = '';
 		
 		try (BufferedReader br =  new BufferedReader(new FileReader("input.txt"))) {
 
